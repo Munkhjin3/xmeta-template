@@ -1,4 +1,4 @@
-import { BigCard, CustomCard } from "@/components";
+import { BigCard, CustomCard, InfinityMoving } from "@/components";
 
 
 
@@ -7,6 +7,7 @@ export default function Home() {
     <div >
       <CustomCard/>
       <BigCard/>
+      <InfinityMoving/>
 
     </div>
   );

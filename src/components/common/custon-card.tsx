@@ -38,7 +38,7 @@ export const CustomCard = () => {
                       })}
                     </div>
                   </div>
-                  <Typography className="!text-white">{e.desc}</Typography>
+                  <Typography className="!text-white max-w-[400px]">{e.desc}</Typography>
                 </div>
                 <Link
                   href={""}
