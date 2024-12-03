@@ -66,9 +66,9 @@ export const Navbar = () => {
             </Link>
           ))}
         </div>
-        <div className="flex items-center max-lg:hidden gap-2">
+        <div  className="flex items-center max-lg:hidden gap-2">
           {buttons2.map((e, i) => (
-            <DropdownMenu>
+            <DropdownMenu key={i}>
               <DropdownMenuTrigger asChild>
                 <Button className={cn(e.className)} variant={"outline"} key={i}>
                   {e.icon && e.icon} {e.title}
