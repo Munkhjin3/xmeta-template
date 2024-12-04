@@ -1,16 +1,18 @@
-import React from 'react'
-import { Container } from './container'
-import { MarketBig } from './market-big'
-import { MarkerSmall } from './market-small'
+import React from "react";
+import { Container } from "./container";
+import { MarketBig } from "./market-big";
+import { MarkerSmall } from "./market-small";
+import { Typography } from "../ui";
 
 export const Market = () => {
   return (
     <Container>
-        <div className='grid md:grid-cols-3 gap-3 w-full'>
-        <MarkerSmall/>
+      <Typography variant={'heading2'} className="!text-start w-full !text-black">Өнөөдрийн крипто зах зээл</Typography>
+      <div className="grid md:grid-cols-3 gap-3 w-full mt-6">
+        <MarkerSmall />
 
-            <MarketBig/>
-        </div>
+        <MarketBig />
+      </div>
     </Container>
-  )
-}
+  );
+};

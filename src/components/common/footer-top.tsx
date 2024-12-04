@@ -16,7 +16,7 @@ export const FooterTop = () => {
                 <Typography >
                 Trade cryptocurrencies safely, quickly, and easily.
                 </Typography>
-                <Button className='w-full'>
+                <Button className='w-full bg-gradient-to-r from-[#462989] to-[#734CDB]'>
                 Яг одоо бүртгүүлэх
                 </Button>
             </div>

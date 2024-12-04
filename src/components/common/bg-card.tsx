@@ -22,15 +22,15 @@ export const BigCard = () => {
           </Typography>
           <div className="flex flex-col md:flex-row gap-2">
             {data.map((e, i) => (
-              <Button className="bg-black border gap-2 rounded-lg py-6 items-center px-3 flex w-full ">
+              <Button key={i} className="bg-black border gap-2 rounded-lg py-6 items-center px-2 flex w-full ">
                 <Image
                   src={e.src}
                   alt=""
-                  width={26}
-                  height={26}
+                  width={30}
+                  height={30}
                 />
-                <div>
-                  <Typography className="text-white text-start !text-sm">{e.title}</Typography>
+                <div className="flex flex-col">
+                  <Typography className="text-white text-start !text-xs">{e.title}</Typography>
                   <Typography className="text-white font-bold">
                     {e.heading}
                   </Typography>

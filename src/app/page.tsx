@@ -1,13 +1,16 @@
-import { BigCard, CustomCard, FooterTop, InfinityMoving, Market } from "@/components";
+import { Announcement, BigCard, CustomCard, FooterTop, InfinityMoving, Market } from "@/components";
 
 
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col gap-20" >
+    <div className="w-full flex flex-col gap-14" >
+      <Announcement/>
       <Market/>
-      <CustomCard/>
-      <BigCard/>
+<div>
+<CustomCard/>
+<BigCard/>
+</div>
       <InfinityMoving/>
       <FooterTop/>
     </div>

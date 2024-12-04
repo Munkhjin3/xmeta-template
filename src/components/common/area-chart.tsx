@@ -2,7 +2,6 @@
 import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 
 export const AreaChartComponent = ({ color, data }: { color: string; data: { time: string; value: number }[] }) => {
-    console.log(data)
   const convertedData = data.map((item) => ({
     name: item.time, 
     uv: item.value,  

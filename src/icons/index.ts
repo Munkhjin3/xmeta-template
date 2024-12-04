@@ -4,6 +4,10 @@ export * from './search-icon'
 export * from './coins-icon'
 export * from './close-icon'
 export * from './hamburger'
+export * from './announcement'
+export * from './arrow-narrow-right'
+
+
 
 
 

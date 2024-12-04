@@ -17,7 +17,9 @@ import { cn } from "@/lib/utils";
 export const CustomCard = () => {
   return (
     <Container>
-      <div className="grid md:grid-cols-2 gap-3">
+      <Typography variant={'heading2'} className="!text-start w-full !text-black">Биднийг сонгох шалтгаан</Typography>
+
+      <div className="grid md:grid-cols-2 gap-3 mt-6">
         {data.map((e, i) => (
           <div className="w-full group" key={i}>
             <Card
