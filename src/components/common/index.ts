@@ -6,6 +6,8 @@ export * from './footer'
 export * from './infinity-moving'
 export * from './market-big'
 export * from './market'
+export * from './footer-top'
+
 
 
 
