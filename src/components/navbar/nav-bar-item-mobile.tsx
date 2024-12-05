@@ -34,7 +34,7 @@ export function NavbarItemsMobile({
           </Link>
         ))}
       </div>
-      <Accordion type="single" collapsible className=" bg-white ">
+      <Accordion type="single" collapsible className=" ">
         {list.map(({ title, mobileSubmenu }, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
             <AccordionTrigger showIcon={mobileSubmenu && true} className="px-3">
@@ -56,14 +56,14 @@ export function NavbarItemsMobile({
       </Accordion>
       <div className="">
       <div className="py-2 px-3 border border-t-0 flex justify-between items-center">
-        <Typography className="!text-lg text-black">Theme</Typography>
+        <Typography className="!text-lg text-black dark:text-white">Theme</Typography>
         <Button variant={'outline'}><Moon size={24} color="#6D55D1" /></Button>
       </div>
-      <div className="py-2 px-3 border border-t-0 flex justify-between items-center">
-        <Typography className="!text-lg text-black">Download</Typography>
+      <div className="py-3 px-3 border border-t-0 flex justify-between items-center">
+        <Typography className="!text-lg text-black dark:text-white">Download</Typography>
       </div>
-      <div className="py-2 px-3 border border-t-0 flex justify-between items-center">
-        <Typography className="!text-lg text-black">English</Typography>
+      <div className="py-3 px-3 border border-t-0 flex justify-between items-center">
+        <Typography className="!text-lg text-black dark:text-white">English</Typography>
       </div>
       </div>
   

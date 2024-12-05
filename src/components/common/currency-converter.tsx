@@ -114,7 +114,7 @@ export const CurrencyConverter = () => {
           </div>
         </div>
       </Card>
-      <div className="absolute  flex justify-center items-center">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2   flex justify-center items-center">
   <div className="rounded-full bg-gradient-to-r from-[#462989] to-[#734CDB] p-4 "><RepeatIcon width={37} height={37}/></div>
 </div>
       <Card>

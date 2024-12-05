@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export const Herocontent = () => {
   return (
-    <div className="max-w-[500px] flex flex-col  h-full  justify-between">
+    <div className="md:max-w-[500px] flex flex-col   h-full  justify-between">
     <div className="flex gap-5 flex-col">
       <Typography
         variant={"title"}

@@ -22,7 +22,7 @@ export const Footer = () => {
               <Typography className="dark:!text-white !text-black !font-semibold">
                 {e.title}
               </Typography>
-              <div className="flex flex-col gap-2">
+              <div key={i} className="flex flex-col gap-2">
                 {e.sub.map((e, i) => (
                   <Link href={e.href}>
                     <Typography
