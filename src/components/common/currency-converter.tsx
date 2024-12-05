@@ -55,7 +55,7 @@ export const CurrencyConverter = () => {
           </Typography>
         </div>
         <div className="space-y-4">
-          <div className="flex justify-between p-4">
+          <div className="flex justify-between py-4 pl-4">
             <div className="flex w-full items-start flex-col gap-5">
               <Select
                 value={sourceCurrency}
@@ -100,7 +100,7 @@ export const CurrencyConverter = () => {
                 type="number"
                 value={sourceAmount}
                 onChange={handleSourceAmountChange}
-                className="!text-2xl text-black text-end dark:text-white w-fit border-none bg-transparent focus:outline-none !placeholder-black dark:!placeholder-white"
+                className="!text-2xl p-0 text-black text-end dark:text-white w-fit border-none bg-transparent focus:outline-none !placeholder-black dark:!placeholder-white"
               />
             </div>
           </div>
@@ -114,7 +114,7 @@ export const CurrencyConverter = () => {
           </div>
         </div>
       </Card>
-      <div className="absolute inset-0 flex justify-center items-center">
+      <div className="absolute  flex justify-center items-center">
   <div className="rounded-full bg-gradient-to-r from-[#462989] to-[#734CDB] p-4 "><RepeatIcon width={37} height={37}/></div>
 </div>
       <Card>

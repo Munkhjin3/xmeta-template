@@ -2,8 +2,11 @@
 import { useEffect, useRef } from 'react';
 import { Container } from './container'
 import Image from 'next/image'
+import { useTheme } from "next-themes";
 
 export const InfinityMoving = () => {
+  const { theme } = useTheme();
+
     const scrollRef = useRef(null);
     const reverseScrollRef = useRef(null);
   
@@ -28,25 +31,26 @@ export const InfinityMoving = () => {
         clearInterval(reverseScrollInterval);
       };
     }, []);
+    const images = theme === 'dark' ? imgsblack : imgs;
   return (
     <Container className='flex flex-col gap-5'>
       <div className="w-full h-full flex overflow-hidden">
         <div ref={scrollRef} className="flex gap-10 w-full overflow-hidden ">
-          {imgs.map((e, i) => (
+          {images.map((e, i) => (
             <Image key={i} src={e} alt="" className="w-auto" width={200} height={70} />
           ))}
-          {imgs.map((e, i) => (
-            <Image key={i + imgs.length} src={e} alt="" className="w-auto" width={200} height={70} />
+          {images.map((e, i) => (
+            <Image key={i + images.length} src={e} alt="" className="w-auto" width={200} height={70} />
           ))}
         </div>
       </div>
       <div className="w-full h-full flex overflow-hidden">
         <div ref={reverseScrollRef} className="flex gap-10 w-full overflow-hidden">
-          {imgs.map((e, i) => (
+          {images.map((e, i) => (
             <Image key={i} src={e} alt="" className="w-auto" width={200} height={70} />
           ))}
-          {imgs.map((e, i) => (
-            <Image key={i + imgs.length} src={e} alt="" className="w-auto" width={200} height={70} />
+          {images.map((e, i) => (
+            <Image key={i + images.length} src={e} alt="" className="w-auto" width={200} height={70} />
           ))}
         </div>
       </div>
@@ -61,4 +65,11 @@ const imgs = [
   '/companys/3.png',
   '/companys/4.png',
   '/companys/5.png'
+]
+const imgsblack = [
+  '/companys/1-black.png',
+  '/companys/2-black.png',
+  '/companys/3-black.png',
+  '/companys/4-black.png',
+  '/companys/5-black.png'
 ]
