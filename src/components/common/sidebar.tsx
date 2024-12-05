@@ -1,11 +1,11 @@
 "use client";
-import { DotGridIcon } from "@/icons";
 import { cn } from "@/lib/utils";
 import {
   ArrowDown,
   ArrowUp,
   ChevronDown,
   ChevronUp,
+  Grip,
   Landmark,
   Logs,
   WalletMinimal,
@@ -24,11 +24,11 @@ export const SideBar = () => {
         className="py-6 px-8 border-b flex gap-3 items-center"
         href={"/dashboard"}
       >
-        <DotGridIcon /> <p>Хянах самбар</p>
+        <Grip strokeWidth={1} /> <p>Хянах самбар</p>
       </Link>
       {navItems.map((item, i) => {
         return (
-          <div className="border-b">
+          <div className="border-b" key={i}>
             <div
               className="py-6 pl-8 pr-4 flex items-center justify-between"
               onClick={() => handleExpand(i)}

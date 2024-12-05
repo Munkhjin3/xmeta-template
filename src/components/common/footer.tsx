@@ -24,7 +24,7 @@ export const Footer = () => {
               </Typography>
               <div key={i} className="flex flex-col gap-2">
                 {e.sub.map((e, i) => (
-                  <Link href={e.href}>
+                  <Link href={e.href} key={i}>
                     <Typography
                       key={i}
                       className="!text-[#475467] !text-base !font-normal"
