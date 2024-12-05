@@ -5,8 +5,8 @@ import { MailIcon } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="w-full  border-t ">
-      <div className="flex justify-between flex-col lg:flex-row gap-2 px-4 sm:px-10 xl:px-28 pb-16 pt-11 ">
+    <footer className="w-full border-t z-10">
+      <div className="flex justify-between flex-col lg:flex-row gap-2 px-4 sm:px-10 xl:px-28 pb-16 pt-11 bg-white">
         <div className="flex flex-col gap-8 max-w-[600px]">
           <Image src={"/x-meta.png"} alt="" width={200} height={100} />
           <Typography>
@@ -36,7 +36,7 @@ export const Footer = () => {
                 {i == 2 && (
                   <div className="flex flex-col gap-1">
                     <div className="border flex items-center px-2 rounded-lg ">
-                        <MailIcon color="#667085" size={18}/>
+                      <MailIcon color="#667085" size={18} />
                       <Input
                         className="border-0 px-1"
                         placeholder="Имэйл хаягаа оруулна уу ...."
