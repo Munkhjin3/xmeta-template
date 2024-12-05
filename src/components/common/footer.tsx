@@ -6,7 +6,7 @@ import { MailIcon } from "lucide-react";
 export const Footer = () => {
   return (
     <footer className="w-full border-t z-10">
-      <div className="flex justify-between flex-col lg:flex-row gap-2 px-4 sm:px-10 xl:px-28 pb-16 pt-11 bg-white">
+      <div className="flex justify-between flex-col lg:flex-row gap-2 px-4 sm:px-10 xl:px-28 pb-16 pt-11 bg-white dark:bg-[#0A0A0A]">
         <div className="flex flex-col gap-8 max-w-[600px]">
           <Image src={"/x-meta.png"} alt="" width={200} height={100} />
           <Typography>
