@@ -11,6 +11,8 @@ export * from "./moon-icon";
 export * from "./gift-icon";
 export * from "./repeat";
 export * from "./dot-grid-icon";
+export * from "./lock-icon";
+
 
 export type IconPropsType = {
   width?: number;

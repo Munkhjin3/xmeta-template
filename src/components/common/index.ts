@@ -11,3 +11,5 @@ export * from "./announcement";
 export * from "./theme-provider";
 export * from "./sidebar";
 export * from "./hero";
+export * from "./auth";
+

@@ -26,7 +26,7 @@ export const Hero = () => {
             height={0}
           />
         </div>
-        <div className="text-transparent border-t h-10 mt-20 border-[#EAECF0] dark:bg-[#0A0A0A]  rounded-t-2xl"></div>
+        <div className="text-transparent border-t h-10 mt-20  dark:bg-[#0A0A0A] bg-white  rounded-t-2xl"></div>
       </div>
     </div>
   );

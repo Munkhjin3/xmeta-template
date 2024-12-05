@@ -1,9 +1,15 @@
+'use client'
 import Image from "next/image";
 import { Button, Input, Typography } from "../ui";
 import Link from "next/link";
 import { MailIcon } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export const Footer = () => {
+  const path = usePathname()
+  if (path == '/login') {
+    return null
+  }
   return (
     <footer className="w-full border-t z-10">
       <div className="flex justify-between flex-col lg:flex-row gap-2 px-4 sm:px-10 xl:px-28 pb-16 pt-11 bg-white dark:bg-[#0A0A0A]">

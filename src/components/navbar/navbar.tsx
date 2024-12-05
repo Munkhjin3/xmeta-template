@@ -121,7 +121,7 @@ export const buttons: Array<{
 }> = [
   {
     title: "Нэвтрэх",
-    href: "/",
+    href: "/login",
     variant: "outline",
   },
   {
