@@ -19,7 +19,7 @@ export const Footer = () => {
         <div className="grid gap-10 sm:grid-cols-3">
           {data.map((e, i) => (
             <div className="flex flex-col gap-2" key={i}>
-              <Typography className="!text-black !font-semibold">
+              <Typography className="dark:!text-white !text-black !font-semibold">
                 {e.title}
               </Typography>
               <div className="flex flex-col gap-2">

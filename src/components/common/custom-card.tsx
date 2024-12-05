@@ -17,13 +17,13 @@ import { cn } from "@/lib/utils";
 export const CustomCard = () => {
   return (
     <Container>
-      <Typography variant={'heading2'} className="!text-start w-full !text-black">Биднийг сонгох шалтгаан</Typography>
+      <Typography variant={'heading2'} className="!text-start w-full ">Биднийг сонгох шалтгаан</Typography>
 
       <div className="grid md:grid-cols-2 gap-3 mt-6">
         {data.map((e, i) => (
           <div className="w-full group" key={i}>
             <Card
-              className="relative overflow-hidden w-full h-full flex max-h-[300px] bg-gradient-to-r from-[#734CDB] to-[#2F176E]"
+              className="relative overflow-hidden w-full h-full flex max-h-[300px] bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card"
               key={i}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#2F176E] to-[#734CDB] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10"></div>

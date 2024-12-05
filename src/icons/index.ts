@@ -6,6 +6,9 @@ export * from './close-icon'
 export * from './hamburger'
 export * from './announcement'
 export * from './arrow-narrow-right'
+export * from './sun-icon'
+export * from './moon-icon'
+
 
 
 

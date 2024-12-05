@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useNavbarConfig } from "./nav-data";
 import { NavbarItem } from "./nav-item";
 import { Button } from "../ui";
-import { Smartphone, CircleHelp, Moon } from "lucide-react";
-import { ReactNode, useState } from "react";
+import { Smartphone, CircleHelp } from "lucide-react";
+import { ReactNode, Suspense, useState } from "react";
 import { DownloadDropdown } from "./download-dropdown";
 import { cn } from "@/lib/utils";
 import {
@@ -13,8 +13,9 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+import { useTheme } from "next-themes";
 import { HelpDropDown } from "./help-dropdown";
-import { HeadphonesIcon, Searchicon, TicketIcon } from "@/icons";
+import { HeadphonesIcon, MoonIcon, Searchicon, SunIcon, TicketIcon } from "@/icons";
 import { Currency } from "./currency";
 import { Market } from "./market";
 import { NavbarItemsMobile } from "./nav-bar-item-mobile";
@@ -22,14 +23,20 @@ import { Hamburger } from "./hamburger";
 export const Navbar = () => {
   const listNavItems = useNavbarConfig();
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
+  const { theme, setTheme } = useTheme();
   const toggleHamburger = () => {
     setHamburgerOpen((prev) => !prev);
   };
+  if (!theme) return null;
   return (
-    <div className="w-full border items-center  justify-between py-5 px-8 flex">
-     {hamburgerOpen && <NavbarItemsMobile toggleHamburger={toggleHamburger}
-          hamburgerOpen={hamburgerOpen} list={listNavItems} />}
+    <div className="w-full border fixed items-center  bg-white dark:bg-black z-50 justify-between py-5 px-8 flex">
+      {hamburgerOpen && (
+        <NavbarItemsMobile
+          toggleHamburger={toggleHamburger}
+          hamburgerOpen={hamburgerOpen}
+          list={listNavItems}
+        />
+      )}
       <div className="flex gap-4">
         <div className="flex items-center gap-4">
           <Link href={"/"}>
@@ -66,7 +73,7 @@ export const Navbar = () => {
             </Link>
           ))}
         </div>
-        <div  className="flex items-center max-lg:hidden gap-2">
+        <div className="flex items-center max-lg:hidden gap-2">
           {buttons2.map((e, i) => (
             <DropdownMenu key={i}>
               <DropdownMenuTrigger asChild>
@@ -77,12 +84,24 @@ export const Navbar = () => {
               <DropdownMenuContent>{e.child}</DropdownMenuContent>
             </DropdownMenu>
           ))}
+          <Suspense>
+            <Button
+              variant={"outline"}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              {theme === "dark" ? (
+           <SunIcon/>
+              ) : (
+                <MoonIcon/>
+              )}
+            </Button>
+          </Suspense>
         </div>
       </div>
       <Hamburger
-          toggleHamburger={toggleHamburger}
-          hamburgerOpen={hamburgerOpen}
-        />
+        toggleHamburger={toggleHamburger}
+        hamburgerOpen={hamburgerOpen}
+      />
     </div>
   );
 };
@@ -139,15 +158,11 @@ const buttons2: Array<{
     child: <Currency />,
   },
   {
-    icon: <Searchicon color="#6D55D1" />,
+    icon: <Searchicon color="black" />,
     child: <Market />,
   },
   {
     icon: <CircleHelp color="#6D55D1" />,
     child: <HelpDropDown data={data} />,
-  },
-  {
-    icon: <Moon size={24} color="#6D55D1" />,
-    child: <DownloadDropdown />,
   },
 ];
