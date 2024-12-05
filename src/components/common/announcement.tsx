@@ -26,7 +26,7 @@ export const Announcement = () => {
         <div className="flex items-center justify-start gap-3 w-full">
           <div className="flex items-center gap-3">
             <AnnouncementIcon />
-            <Typography className="!text-black font-semibold">IHC Trading competition</Typography>
+            <Typography className="!text-black dark:!text-white font-semibold">IHC Trading competition</Typography>
             <Typography className="!text-sm">2024/10/28</Typography>
             <ArrowNarrowRight/>
           </div>
