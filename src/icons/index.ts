@@ -8,6 +8,10 @@ export * from './announcement'
 export * from './arrow-narrow-right'
 export * from './sun-icon'
 export * from './moon-icon'
+export * from './gift-icon'
+export * from './repeat'
+
+
 
 
 

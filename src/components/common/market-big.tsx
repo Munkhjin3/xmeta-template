@@ -55,13 +55,13 @@ export const MarketBig = () => {
                 <TableCell className="flex gap-2 items-center">
                   {" "}
                   <Image src={e.icon} width={24} height={24} alt="" />
-                  <Typography className="font-semibold !text-black">
+                  <Typography className="font-semibold dark:!text-white !text-black">
                     {e.title}
                   </Typography>
                 </TableCell>
                 <TableCell>
                   {" "}
-                  <Typography>{e.price}</Typography>
+                  <Typography className="dark:!text-white !text-black">{e.price}</Typography>
                 </TableCell>
                 <TableCell>
                   {" "}

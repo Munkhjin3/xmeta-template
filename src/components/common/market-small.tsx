@@ -13,7 +13,7 @@ export const MarkerSmall = () => {
       <div>
         <div className="border-b flex justify-between border-green-400 p-4">
           <div className="flex gap-2 items-center">
-            <Typography className="text-[#32D583] font-bold">
+            <Typography className="!text-[#32D583] font-bold">
               Top Gainers
             </Typography>
             <TrendingUp color="#32D583" />
@@ -35,12 +35,12 @@ export const MarkerSmall = () => {
               <TableRow key={i}>
                 <TableCell className="flex gap-2 items-center">
                   <Image src={e.icon} width={12} height={12} alt={e.title} />
-                  <Typography className="font-semibold !text-black">
+                  <Typography className="font-semibold dark:!text-white !text-black">
                     {e.title}
                   </Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography>{e.price}</Typography>
+                  <Typography className="dark:!text-white !text-black">{e.price}</Typography>
                 </TableCell>
                 <TableCell>
                   <Typography
@@ -57,7 +57,7 @@ export const MarkerSmall = () => {
       <div>
         <div className="border-b flex justify-between p-4 border-red-400">
           <div className="flex gap-2 items-center">
-            <Typography className="text-[#F97066] font-bold">
+            <Typography className="!text-[#F97066] font-bold">
               Top Losers
             </Typography>
             <TrendingDown color="#F97066" />
@@ -79,12 +79,12 @@ export const MarkerSmall = () => {
               <TableRow key={i}>
                 <TableCell className="flex gap-2 items-center">
                   <Image src={e.icon} width={12} height={12} alt={e.title} />
-                  <Typography className="font-semibold !text-black">
+                  <Typography className="font-semibold dark:!text-white !text-black">
                     {e.title}
                   </Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography>{e.price}</Typography>
+                  <Typography className="dark:!text-white !text-black">{e.price}</Typography>
                 </TableCell>
                 <TableCell>
                   <Typography

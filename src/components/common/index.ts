@@ -9,6 +9,8 @@ export * from './market'
 export * from './footer-top'
 export * from './announcement'
 export * from './theme-provider'
+export * from './hero'
+
 
 
 

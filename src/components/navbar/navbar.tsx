@@ -29,7 +29,7 @@ export const Navbar = () => {
   };
   if (!theme) return null;
   return (
-    <div className="w-full border fixed items-center  bg-white dark:bg-black z-50 justify-between py-5 px-8 flex">
+    <div className="w-full border fixed items-center  bg-white dark:bg-[#0A0A0A] z-50 justify-between py-5 px-8 flex">
       {hamburgerOpen && (
         <NavbarItemsMobile
           toggleHamburger={toggleHamburger}
