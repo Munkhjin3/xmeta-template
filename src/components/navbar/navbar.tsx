@@ -126,7 +126,7 @@ export const buttons: Array<{
   },
   {
     title: "Бүртгүүлэх",
-    href: "/",
+    href: "/signup",
     variant: "default",
     className: "bg-gradient-to-r from-[#462989] to-[#734CDB] px-10 ",
   },

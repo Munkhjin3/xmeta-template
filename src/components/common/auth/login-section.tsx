@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const LoginSecion = () => {
   return (
-    <div className="w-full flex flex-col gap-5 items-center">
+    <div className="w-full max-md:hidden flex flex-col gap-5 items-center">
       <div className="max-w-[614px] flex flex-col gap-28">
         <div className="w-full flex-col flex gap-3">
           <Typography variant={"heading2"}>Trade with confidence</Typography>

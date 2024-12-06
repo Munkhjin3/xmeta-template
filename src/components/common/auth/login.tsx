@@ -15,11 +15,14 @@ export const Login = () => {
   const isActive = (tabName: string) => active === tabName;
   return (
     <div className="w-full flex flex-col gap-5 items-center">
-      <div className="flex w-full  max-w-[500px] justify-between  gap-5   ">
+      <div className="flex w-full max-md:flex-col  max-w-[500px] justify-between  gap-5   ">
         <Typography variant={"heading2"}>Нэвтрэх</Typography>
-        <div className="border  rounded-xl items-center flex gap-2 p-1">
+        <div className="border   rounded-xl items-center flex gap-2 p-1">
           <LockIcon />{" "}
-          <Typography className="!text-black !text-sm">URL баталгаажуулалт:<span className="text-green-500">https://</span>www.x-meta.com</Typography>
+          <Typography className="!text-black dark:!text-white !text-sm">
+            URL баталгаажуулалт:<span className="text-green-500">https://</span>
+            www.x-meta.com
+          </Typography>
         </div>
       </div>
       <div className="w-full max-w-[500px] flex flex-col gap-5">
