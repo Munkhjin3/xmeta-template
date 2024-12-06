@@ -12,4 +12,8 @@ export * from "./theme-provider";
 export * from "./sidebar";
 export * from "./hero";
 export * from "./auth";
+export * from "./2fa";
+export * from "./sms-modal";
+
+
 

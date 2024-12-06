@@ -55,7 +55,7 @@ export const SignupSection = () => {
         </div>
         <div>
           {data.map((e, i) => (
-            <div>
+            <div key={i}>
               <Typography>{e}</Typography>
             </div>
           ))}

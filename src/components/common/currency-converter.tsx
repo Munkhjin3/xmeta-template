@@ -16,7 +16,7 @@ import { RepeatIcon } from "@/icons";
 const CURRENCIES = [
   { code: "MNT", label: "Mongolian Tugrik", img: "/region/us.png" },
   { code: "USD", label: "US Dollar", img: "/region/us.png" },
-  { code: "USDT", label: "Tether", img: "/region/t.png" },
+  { code: "USDT", label: "Tether", img: "/region/us.png" },
   { code: "BTC", label: "Bitcoin", img: "/region/us.png" },
 ];
 
@@ -139,13 +139,15 @@ export const CurrencyConverter = () => {
                   ).map((currency) => (
                     <SelectItem key={currency.code} value={currency.code}>
                       <div className="flex items-center gap-2">
-                        <Image
-                          src={currency.img}
-                          alt=""
-                          width={36}
-                          height={36}
-                          className="rounded-full"
-                        />
+                      <div className="border rounded-lg h-5 w-5">
+                          <Image
+                            src={currency.img}
+                            className="h-full w-full rounded-full object-cover"
+                            alt={currency.img}
+                            width={100}
+                            height={100}
+                          />
+                        </div>
                         <Typography className="dark:!text-white !text-black">
                           {" "}
                           {currency.label}

@@ -2,11 +2,16 @@
 'use client'
 import { Button, Input, Typography } from "@/components/ui";
 import { Eye, EyeOff, Lock, Mail } from "lucide-react";
-import  { useState } from "react";
+import  { useCallback, useState } from "react";
+import { TwoFactorModal } from "../2fa";
 
 export const LoginInputSection = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const [modal, setModal] = useState(false);
 
+    const modalHandler = useCallback(() => {
+      setModal((prevModal) => !prevModal);
+    }, []);
     const togglePasswordVisibility = () => setShowPassword((prev) => !prev);
   return (
     <div className="w-full flex flex-col gap-5">
@@ -41,8 +46,10 @@ export const LoginInputSection = () => {
       </div>
       <Typography className="text-end">Нууц үгээ мартсан</Typography>
       <div className="w-full mt-9">
-        <Button className="w-full">Нэвтрэх</Button>
+        <Button onClick={modalHandler} className="w-full">Нэвтрэх</Button>
       </div>
+      <TwoFactorModal isOpen={modal} onClose={modalHandler}/>
+
     </div>
   );
 };
