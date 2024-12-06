@@ -1,3 +1,4 @@
+'use client'
 import { cn } from "@/lib/utils";
 import { NavbarItemPropsType } from "./type";
 import { ChevronDown } from "lucide-react";
@@ -9,8 +10,23 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { CoinSwapIcon } from "@/icons";
+import { useTheme } from "next-themes";
 
 export const NavbarItem = ({ text, isOpen, child }: NavbarItemPropsType) => {
+  const {theme} = useTheme()
+
+  const data = [
+    {
+      title: "Спот арилжаа",
+      icon: <CoinSwapIcon color={theme == 'light' ?'' :"white"} />,
+      desc: "Спот арилжаа",
+    },
+    {
+      title: "Фьючерс арилжаа",
+      icon: <CoinSwapIcon color={theme == 'light' ?'' :"white"} />,
+      desc: "Фьючерс арилжаа",
+    },
+  ];
   return (
     <div className="flex cursor-pointer items-center gap-2">
       {child ? (
@@ -39,15 +55,4 @@ export const NavbarItem = ({ text, isOpen, child }: NavbarItemPropsType) => {
   );
 };
 
-const data = [
-  {
-    title: "Спот арилжаа",
-    icon: <CoinSwapIcon />,
-    desc: "Спот арилжаа",
-  },
-  {
-    title: "Фьючерс арилжаа",
-    icon: <CoinSwapIcon />,
-    desc: "Фьючерс арилжаа",
-  },
-];
+

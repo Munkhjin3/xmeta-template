@@ -24,7 +24,7 @@ export const CustomCard = () => {
         {data.map((e, i) => (
           <div className="w-full group" key={i}>
             <Card
-              className="relative overflow-hidden rounded-2xl w-full h-full flex max-h-[300px] bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card"
+              className="relative overflow-hidden rounded-2xl w-full flex h-[300px] bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card"
               key={i}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#2F176E] to-[#734CDB] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10"></div>

@@ -27,7 +27,41 @@ export const Navbar = () => {
   const toggleHamburger = () => {
     setHamburgerOpen((prev) => !prev);
   };
-
+  const data = [
+    {
+      title: "Support Center",
+      icon: <HeadphonesIcon color={theme == 'light' ?'' :"white"} />,
+    },
+    {
+      title: "My tickets",
+      icon: <TicketIcon color={theme == 'light' ?'' :"white"} />,
+    },
+  ];
+  const buttons2: Array<{
+    title?: string;
+    child: ReactNode;
+    icon?: JSX.Element;
+    className?: string;
+    onClick?: () => void;
+  }> = [
+    {
+      title: "Татах",
+      icon: <Smartphone size={24} color="#6D55D1" />,
+      child: <DownloadDropdown />,
+    },
+    {
+      title: "ENG / USD-$",
+      child: <Currency />,
+    },
+    {
+      icon: <Searchicon color="black" />,
+      child: <Market />,
+    },
+    {
+      icon: <CircleHelp color="#6D55D1" />,
+      child: <HelpDropDown data={data} />,
+    },
+  ];
   return (
     <div className="w-full border fixed items-center  bg-white dark:bg-[#0A0A0A] z-50 justify-between py-5 px-8 flex">
       {hamburgerOpen && (
@@ -131,38 +165,5 @@ export const buttons: Array<{
     className: "bg-gradient-to-r from-[#462989] to-[#734CDB] px-10 ",
   },
 ];
-const data = [
-  {
-    title: "Support Center",
-    icon: <HeadphonesIcon />,
-  },
-  {
-    title: "My tickets",
-    icon: <TicketIcon />,
-  },
-];
-const buttons2: Array<{
-  title?: string;
-  child: ReactNode;
-  icon?: JSX.Element;
-  className?: string;
-  onClick?: () => void;
-}> = [
-  {
-    title: "Татах",
-    icon: <Smartphone size={24} color="#6D55D1" />,
-    child: <DownloadDropdown />,
-  },
-  {
-    title: "ENG / USD-$",
-    child: <Currency />,
-  },
-  {
-    icon: <Searchicon color="black" />,
-    child: <Market />,
-  },
-  {
-    icon: <CircleHelp color="#6D55D1" />,
-    child: <HelpDropDown data={data} />,
-  },
-];
+
+
