@@ -5,20 +5,27 @@ import { Typography } from "../ui";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "@/hooks/media-query";
 
 export const Announcement = () => {
+  const { isMobile } = useMediaQuery();
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const itemsPerSlide = isMobile ? 2 : 4; 
   const getCurrentSlideImages = () => {
-    const startIndex = currentSlide * 4;
-    return data.slice(startIndex, startIndex + 4);
+    const startIndex = currentSlide * itemsPerSlide;
+    return data.slice(startIndex, startIndex + itemsPerSlide);
   };
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % Math.ceil(data.length / 4));
+      setCurrentSlide((prevSlide) => 
+        (prevSlide + 1) % Math.ceil(data.length / itemsPerSlide)
+      );
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, [currentSlide, itemsPerSlide]);
 
   return (
     <Container>
@@ -34,7 +41,7 @@ export const Announcement = () => {
             🔥 HOT
           </div>
         </div>
-        <div className="grid grid-cols-4 w-full gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-3">
           {getCurrentSlideImages().map((e, i) => (
             <Image
               key={i}

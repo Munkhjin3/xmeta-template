@@ -11,8 +11,7 @@ import {
 export default function Home() {
   return (
     <div className="w-full flex flex-col gap-14">
-      <Hero/>
- 
+      <Hero />
       <Announcement />
       <Market />
       <div>
