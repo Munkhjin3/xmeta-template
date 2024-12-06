@@ -57,7 +57,7 @@ export const Navbar = () => {
             height={0}
           />
         </div>
-        <div className="flex gap-4 max-md:hidden">
+        <div className="flex gap-4 max-xl:hidden">
           {listNavItems.map(({ title, child }, index) => (
             <NavbarItem key={index + 1} text={title} child={child} />
           ))}

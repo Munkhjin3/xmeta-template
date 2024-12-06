@@ -47,10 +47,11 @@ export const CustomCard = () => {
                   href={""}
                   className="border  bg-transparent hover:bg-white/60  w-fit p-2 relative inline-flex items-center justify-start overflow-hidden rounded-lg group-hover:bg-white transition-all duration-500 ease-in-out group-hover:pl-16 "
                 >
-                  <span className="absolute px-2 opacity-0 group-hover:opacity-100 left-0 -translate-x-12  duration-200 text-white group-hover:text-black ease-out group-hover:translate-x-0">
+                  <div className="absolute flex gap-2 px-1 opacity-0 group-hover:opacity-100 left-0 -translate-x-12  duration-200 text-white group-hover:text-black ease-out group-hover:translate-x-0">
                     Дэлгэрэнгүй
-                  </span>
-                  <MoveRight className="group-hover:-rotate-45 group-hover:ml-14 text-white group-hover:text-black transition-all duration-500" />
+                  <MoveRight className="group-hover:-rotate-45  text-black transition-all duration-500" />
+                  </div>
+                  <ArrowRight className="group-hover:-rotate-45 group-hover:opacity-0 group-hover:ml-12 text-white group-hover:text-black transition-all duration-500"/>
                 </Link>
               </div>
               <Image

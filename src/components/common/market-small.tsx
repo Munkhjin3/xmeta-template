@@ -34,7 +34,7 @@ export const MarkerSmall = () => {
             {topGainers.map((e, i) => (
               <TableRow key={i}>
                 <TableCell className="flex gap-2 items-center">
-                  <Image src={e.icon} width={12} height={12} alt={e.title} />
+                  <Image src={e.icon} width={24} height={24} alt={e.title} />
                   <Typography className="font-semibold dark:!text-white !text-black">
                     {e.title}
                   </Typography>
@@ -78,7 +78,7 @@ export const MarkerSmall = () => {
             {topLosers.map((e, i) => (
               <TableRow key={i}>
                 <TableCell className="flex gap-2 items-center">
-                  <Image src={e.icon} width={12} height={12} alt={e.title} />
+                  <Image src={e.icon} width={24} height={24} alt={e.title} />
                   <Typography className="font-semibold dark:!text-white !text-black">
                     {e.title}
                   </Typography>

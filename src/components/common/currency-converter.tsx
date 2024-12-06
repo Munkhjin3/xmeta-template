@@ -14,10 +14,10 @@ import Image from "next/image";
 import { RepeatIcon } from "@/icons";
 
 const CURRENCIES = [
-  { code: "MNT", label: "Mongolian Tugrik", img: "/region/us.png" },
+  { code: "MNT", label: "Mongolian Tugrik", img: "/region/mn.png" },
   { code: "USD", label: "US Dollar", img: "/region/us.png" },
-  { code: "USDT", label: "Tether", img: "/region/us.png" },
-  { code: "BTC", label: "Bitcoin", img: "/region/us.png" },
+  { code: "USDT", label: "Tether", img: "/region/t.png" },
+  { code: "BTC", label: "Bitcoin", img: "/bitcoin.png" },
 ];
 
 export const CurrencyConverter = () => {
@@ -70,10 +70,10 @@ export const CurrencyConverter = () => {
                   ).map((currency) => (
                     <SelectItem key={currency.code} value={currency.code}>
                       <div className="flex items-center gap-2">
-                        <div className="border rounded-lg h-5 w-5">
+                        <div className="border rounded-lg p-1 h-8 w-8">
                           <Image
                             src={currency.img}
-                            className="h-full w-full rounded-full object-cover"
+                            className="h-full w-full rounded-full "
                             alt={currency.img}
                             width={100}
                             height={100}
@@ -139,10 +139,10 @@ export const CurrencyConverter = () => {
                   ).map((currency) => (
                     <SelectItem key={currency.code} value={currency.code}>
                       <div className="flex items-center gap-2">
-                      <div className="border rounded-lg h-5 w-5">
+                      <div className="border rounded-lg p-1 h-8 w-8">
                           <Image
                             src={currency.img}
-                            className="h-full w-full rounded-full object-cover"
+                            className="h-full w-full rounded-full "
                             alt={currency.img}
                             width={100}
                             height={100}

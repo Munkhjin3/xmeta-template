@@ -16,7 +16,7 @@ export const LoginInputSection = () => {
   return (
     <div className="w-full flex flex-col gap-5">
       <div className="border w-full rounded-lg px-3 py-2 flex items-center">
-        <Mail />
+        <Mail size={20} color="#667085" />
         <Input
           type="email"
           className="border-none"
@@ -24,7 +24,7 @@ export const LoginInputSection = () => {
         />
       </div>
       <div className="border w-full rounded-lg px-3 py-2 flex items-center">
-        <Lock aria-hidden="true" className="mr-2 text-gray-500" />
+        <Lock size={20} color="#667085" aria-hidden="true" className="mr-2 text-gray-500" />
         <Input
           type={showPassword ? "text" : "password"}
           className="border-none focus:outline-none flex-1"

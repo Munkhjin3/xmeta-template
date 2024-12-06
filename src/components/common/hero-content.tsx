@@ -1,17 +1,21 @@
-import React from 'react'
+'use client'
 import { Button, Input, Typography } from '../ui'
 import { GiftIcon } from '@/icons'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 
 export const Herocontent = () => {
+  const { theme} = useTheme()
+  const img = theme == 'dark' ? 'qr-white.svg' :'qr.svg'
   return (
     <div className="lg:max-w-[500px] flex flex-col   h-full  justify-between">
     <div className="flex gap-5 flex-col">
       <Typography
         variant={"title"}
-        className=" font-semibold  text-primary dark:text-white "
+        className=" font-semibold space-y-4  text-primary dark:text-white "
       >
-        Mongolia's #1 cryptocurrency exchange
+        Mongolia's #1
+         cryptocurrency exchange
       </Typography>
       <Typography>
         Where every trade builds a better tomorrow
@@ -30,7 +34,7 @@ export const Herocontent = () => {
         <Button className="w-full py-7">Sign up for bonus</Button>
         <Button variant={"outline"} className="w-fit py-7">
           {" "}
-          <Image src={"/qr.svg"} width={32} height={32} alt="" />
+          <Image src={img} width={32} height={32} alt="" />
         </Button>
         <Button variant={"outline"} className="w-fit py-7">
           <Image

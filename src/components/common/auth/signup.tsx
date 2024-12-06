@@ -15,7 +15,7 @@ export const SignupSection = () => {
         <div className="flex w-full  max-w-[600px] max-md:flex-col justify-between  gap-5   ">
           <Typography variant={"heading2"}>Бүртгүүлэх</Typography>
           <div className="border  rounded-xl items-center flex gap-2 p-1">
-            <LockIcon />{" "}
+            <LockIcon  />{" "}
             <Typography className="!text-black dark:!text-white !text-sm">
               URL баталгаажуулалт:
               <span className="text-green-500">https://</span>
@@ -25,7 +25,7 @@ export const SignupSection = () => {
         </div>
      <div className="flex flex-col gap-3">
      <div className="border w-full rounded-lg px-3 py-2 flex items-center">
-          <Mail />
+          <Mail size={20} color="#667085" />
           <Input
             type="email"
             className="border-none"
@@ -33,7 +33,7 @@ export const SignupSection = () => {
           />
         </div>
         <div className="border w-full rounded-lg px-3 py-2 flex items-center">
-          <Lock aria-hidden="true" className="mr-2 text-gray-500" />
+          <Lock size={20} color="#667085" aria-hidden="true" className="mr-2 text-gray-500" />
           <Input
             type={showPassword ? "text" : "password"}
             className="border-none focus:outline-none flex-1"
@@ -47,9 +47,9 @@ export const SignupSection = () => {
             className="ml-2"
           >
             {showPassword ? (
-              <EyeOff className="text-gray-500" />
+              <EyeOff size={20} color="#667085" className="text-gray-500" />
             ) : (
-              <Eye className="text-gray-500" />
+              <Eye size={20} color="#667085" className="text-gray-500" />
             )}
           </button>
         </div>
