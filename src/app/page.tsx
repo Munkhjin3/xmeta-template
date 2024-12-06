@@ -1,12 +1,23 @@
+"use client";
 import {
   Announcement,
   BigCard,
   CustomCard,
   FooterTop,
   Hero,
-  InfinityMoving,
   Market,
 } from "@/components";
+import dynamic from "next/dynamic";
+
+const InfinityMoving = dynamic(
+  () =>
+    import("@/components/common/infinity-moving").then(
+      (components) => components.InfinityMoving
+    ),
+  {
+    ssr: false,
+  }
+);
 
 export default function Home() {
   return (
