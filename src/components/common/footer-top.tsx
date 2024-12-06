@@ -20,7 +20,7 @@ export const FooterTop = () => {
                 Яг одоо бүртгүүлэх
                 </Button>
             </div>
-            <Image src='/footer.png' alt='' width={0} height={0} sizes='100vw' className='w-full'/>
+            <Image src='/footer.png' alt='' width={1200} height={700} sizes='100vw' />
         </div>
     </Container>
     </div>

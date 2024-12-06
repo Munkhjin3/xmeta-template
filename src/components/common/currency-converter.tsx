@@ -179,6 +179,7 @@ export const CurrencyConverter = () => {
           </div>
         </div>
       </Card>
+        <Button variant={'outline'}>Buy USDT</Button>
     </div>
   );
 };

@@ -5,25 +5,26 @@ import {
   Percent,
   ShieldPlus,
   Headphones,
-  ArrowRightIcon,
+  MoveRight,
 } from "lucide-react";
 import { Container } from "./container";
 import { Typography } from "../ui";
 import Image from "next/image";
 import Link from "next/link";
 import { cloneElement } from "react";
-import { cn } from "@/lib/utils";
 
 export const CustomCard = () => {
   return (
     <Container>
-      <Typography variant={'heading2'} className="!text-start w-full ">Биднийг сонгох шалтгаан</Typography>
+      <Typography variant={"heading2"} className="!text-start w-full ">
+        Биднийг сонгох шалтгаан
+      </Typography>
 
       <div className="grid md:grid-cols-2 gap-3 mt-6">
         {data.map((e, i) => (
           <div className="w-full group" key={i}>
             <Card
-              className="relative overflow-hidden w-full h-full flex max-h-[300px] bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card"
+              className="relative overflow-hidden rounded-2xl w-full h-full flex max-h-[300px] bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card"
               key={i}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#2F176E] to-[#734CDB] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10"></div>
@@ -40,25 +41,22 @@ export const CustomCard = () => {
                       })}
                     </div>
                   </div>
-                  <Typography className="!text-white max-w-[400px]">{e.desc}</Typography>
+                  <Typography className="!text-white !font-light">{e.desc}</Typography>
                 </div>
                 <Link
                   href={""}
-                  className="border flex bg-transparent hover:bg-white/60 rounded-lg w-fit transition-all duration-300 p-2"
+                  className="border  bg-transparent hover:bg-white/60  w-fit p-2 relative inline-flex items-center justify-start overflow-hidden rounded-lg group-hover:bg-white transition-all duration-500 ease-in-out group-hover:pl-16 "
                 >
-                  <p className="hidden group-hover:block text-white">
+                  <span className="absolute px-2 opacity-0 group-hover:opacity-100 left-0 -translate-x-12  duration-200 text-white group-hover:text-black ease-out group-hover:translate-x-0">
                     Дэлгэрэнгүй
-                  </p>
-                  <ArrowRight
-                    className="group-hover:-rotate-45 transition-all duration-100"
-                    color="white"
-                  />
+                  </span>
+                  <MoveRight className="group-hover:-rotate-45 group-hover:ml-14 text-white group-hover:text-black transition-all duration-500" />
                 </Link>
               </div>
               <Image
                 src={e.img}
                 alt=""
-                className="relative z-10 w-1/2 max-sm:hidden group-hover:scale-125 transition-all duration-300	 object-cover pr-2"
+                className="relative z-10 w-1/2 max-sm:hidden group-hover:scale-125 transition-all duration-500	 object-cover pr-2"
                 sizes="100vw"
                 width={0}
                 height={0}
@@ -90,7 +88,7 @@ const data = [
     img: "/card/mac.png",
   },
   {
-    title: "24/7 Хэрэглэгчийн Туслах",
+    title: "Аюулгүй байдал",
     desc: "Хүссэн үедээ хэрэглэгчийн туслахтай холбогдон асуудлаа шийдвэрлүүлээрэй.",
     icon: <ShieldPlus size={20} />,
     img: "/card/screen.png",
