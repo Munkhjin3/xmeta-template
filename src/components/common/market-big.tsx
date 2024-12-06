@@ -129,7 +129,7 @@ const data = [
     absoluteGain: -0.32,
   },
   {
-    icon: "/bitcoin.svg",
+    icon: "/ihc.png",
     title: "BTCUSD",
     price: "$28,457",
     change: +0.64,
@@ -145,7 +145,7 @@ const data = [
   },
   {
     icon: "/eth.svg",
-    title: "ETH",
+    title: "PEPE",
     price: "$1,745",
     change: -0.32,
     chart: [
@@ -171,8 +171,8 @@ const data = [
     absoluteGain: +0.64,
   },
   {
-    icon: "/eth.svg",
-    title: "ETH",
+    icon: "/shib.svg",
+    title: "SHIB",
     price: "$1,745",
     change: -0.32,
     chart: [
@@ -183,7 +183,7 @@ const data = [
     absoluteGain: -0.32,
   },
   {
-    icon: "/eth.svg",
+    icon: "/ihc.png",
     title: "ETH",
     price: "$1,745",
     change: -0.32,

@@ -5,7 +5,7 @@ import { useNavbarConfig } from "./nav-data";
 import { NavbarItem } from "./nav-item";
 import { Button } from "../ui";
 import { Smartphone, CircleHelp } from "lucide-react";
-import { ReactNode, Suspense, useState } from "react";
+import { ReactNode, Suspense, useCallback, useState } from "react";
 import { DownloadDropdown } from "./download-dropdown";
 import { cn } from "@/lib/utils";
 import {
@@ -15,7 +15,13 @@ import {
 } from "../ui/dropdown-menu";
 import { useTheme } from "next-themes";
 import { HelpDropDown } from "./help-dropdown";
-import { HeadphonesIcon, MoonIcon, Searchicon, SunIcon, TicketIcon } from "@/icons";
+import {
+  HeadphonesIcon,
+  MoonIcon,
+  Searchicon,
+  SunIcon,
+  TicketIcon,
+} from "@/icons";
 import { Currency } from "./currency";
 import { Market } from "./market";
 import { NavbarItemsMobile } from "./nav-bar-item-mobile";
@@ -27,14 +33,18 @@ export const Navbar = () => {
   const toggleHamburger = () => {
     setHamburgerOpen((prev) => !prev);
   };
+
+  const getVectorPath = useCallback(() => {
+    return theme === "light" ? "/navbar/vector.png" : "/navbar/vector-black.png";
+  }, [theme]);
   const data = [
     {
       title: "Support Center",
-      icon: <HeadphonesIcon color={theme == 'light' ?'' :"white"} />,
+      icon: <HeadphonesIcon color={theme == "light" ? "#344054" : "white"} />,
     },
     {
       title: "My tickets",
-      icon: <TicketIcon color={theme == 'light' ?'' :"white"} />,
+      icon: <TicketIcon color={theme == "light" ? "#344054" : "white"} />,
     },
   ];
   const buttons2: Array<{
@@ -54,14 +64,16 @@ export const Navbar = () => {
       child: <Currency />,
     },
     {
-      icon: <Searchicon color="black" />,
+      icon: <Searchicon color={theme == "light" ? "#344054" : "white"} />,
       child: <Market />,
     },
     {
-      icon: <CircleHelp color="#6D55D1" />,
+      icon: <CircleHelp color={theme == "light" ? "#344054" : "white"} />,
       child: <HelpDropDown data={data} />,
     },
   ];
+  const vector =
+    theme == "dark" ? "/navbar/vector.png" : "/navbar/vector-black.png";
   return (
     <div className="w-full border fixed items-center  bg-white dark:bg-[#0A0A0A] z-50 justify-between py-5 px-8 flex">
       {hamburgerOpen && (
@@ -84,7 +96,7 @@ export const Navbar = () => {
             />
           </Link>
           <Image
-            src={"/navbar/vector.png"}
+            src={getVectorPath()}
             alt=""
             width={0}
             className="w-[2px] h-12"
@@ -123,11 +135,7 @@ export const Navbar = () => {
               variant={"outline"}
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
-              {theme === "dark" ? (
-           <SunIcon/>
-              ) : (
-                <MoonIcon/>
-              )}
+              {theme === "dark" ? <SunIcon /> : <MoonIcon />}
             </Button>
           </Suspense>
         </div>
@@ -165,5 +173,3 @@ export const buttons: Array<{
     className: "bg-gradient-to-r from-[#462989] to-[#734CDB] px-10 ",
   },
 ];
-
-

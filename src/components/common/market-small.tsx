@@ -118,8 +118,8 @@ const data = [
     change: -0.32,
   },
   {
-    icon: "/bitcoin.svg",
-    title: "BTCUSD",
+    icon: "/ihc.png",
+    title: "IHC",
     price: "$28,457",
     change: +0.64,
   },
@@ -136,8 +136,8 @@ const data = [
     change: +0.64,
   },
   {
-    icon: "/eth.svg",
-    title: "ETH",
+    icon: "/shib.svg",
+    title: "SHIB",
     price: "$1,745",
     change: -0.32,
   },

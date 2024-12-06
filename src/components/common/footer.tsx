@@ -69,7 +69,7 @@ export const Footer = () => {
                   <Image
                     src={e}
                     alt=""
-                    className="size-7"
+                    className="size-5"
                     width={0}
                     height={0}
                   />

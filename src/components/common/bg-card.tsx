@@ -11,7 +11,7 @@ export const BigCard = () => {
         <div className="md:pl-8 flex flex-col gap-3">
           <Typography className="text-white" variant={"title"}>
             Trade{" "}
-            <span className="font-normal">
+            <span className="font-light">
               {" "}
               <br />
               Anywhere,Anytime

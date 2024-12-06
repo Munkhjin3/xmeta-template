@@ -179,7 +179,7 @@ export const CurrencyConverter = () => {
           </div>
         </div>
       </Card>
-        <Button variant={'outline'}>Buy USDT</Button>
+        <Button  className="py-7" variant={'outline'}>Buy USDT</Button>
     </div>
   );
 };
