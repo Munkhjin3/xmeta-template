@@ -8,7 +8,7 @@ export const BigCard = () => {
   return (
     <Container>
       <Card className="bg-gradient-to-r w-full flex max-sm:justify-center p-4  justify-between items-center dark:dark-card">
-        <div className="md:pl-8 flex flex-col gap-3">
+        <div className="md:pl-8 flex flex-col gap-6">
           <Typography className="text-white" variant={"title"}>
             Trade{" "}
             <span className="font-light">
