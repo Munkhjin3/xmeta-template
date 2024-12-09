@@ -165,10 +165,10 @@ export const CurrencyConverter = () => {
               </div>
             </div>
             <div>
-              <Typography className="!text-2xl text-black dark:text-white">
+              <Typography className="!text-2xl !text-black dark:!text-white">
                 {convertedAmount 
-                  ? `${convertedAmount} ${targetCurrency}`
-                  : `0 ${targetCurrency}`}
+                  ? `${convertedAmount}`
+                  : `0`}
               </Typography>
             </div>
           </div>
