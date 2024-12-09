@@ -12,12 +12,16 @@ import { CustomSheet } from "../common";
 import { buttons } from "./navbar";
 import Link from "next/link";
 import { Moon } from "lucide-react";
+import { useTheme } from "next-themes";
+import { MoonIcon, SunIcon } from "@/icons";
 
 export function NavbarItemsMobile({
   list,
   toggleHamburger,
   hamburgerOpen,
 }: NavbarItemMobilePropsType) {
+  const { theme, setTheme } = useTheme();
+
   return (
     <CustomSheet
       title=""
@@ -55,9 +59,15 @@ export function NavbarItemsMobile({
         ))}
       </Accordion>
       <div className="">
-      <div className="py-2 px-3 border border-t-0 flex justify-between items-center">
+      <div 
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+       className="py-2 px-3 cursor-pointer border border-t-0 flex justify-between items-center">
         <Typography className="!text-lg text-black dark:text-white">Theme</Typography>
-        <Button variant={'outline'}><Moon size={24} color="#6D55D1" /></Button>
+        <Button
+              variant={"outline"}
+            >
+              {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+            </Button>
       </div>
       <div className="py-3 px-3 border border-t-0 flex justify-between items-center">
         <Typography className="!text-lg text-black dark:text-white">Download</Typography>
