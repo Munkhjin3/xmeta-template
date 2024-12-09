@@ -57,7 +57,7 @@ export const CustomCard = () => {
               <Image
                 src={e.img}
                 alt=""
-                className="relative z-10 w-[300px] md:w-1/2  group-hover:scale-125 transition-all duration-500	 object-cover pr-2"
+                className="relative z-10 w-[300px] md:w-1/2  group-hover:scale-125 transition-all duration-500	 object-cover "
                 sizes="100vw"
                 width={0}
                 height={0}
