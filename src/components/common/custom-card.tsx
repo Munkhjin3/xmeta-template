@@ -20,11 +20,11 @@ export const CustomCard = () => {
         Биднийг сонгох шалтгаан
       </Typography>
 
-      <div className="grid md:grid-cols-2 gap-3 mt-6">
+      <div className="grid lg:grid-cols-2 gap-3 mt-6">
         {data.map((e, i) => (
           <div className="w-full group" key={i}>
             <Card
-              className="relative overflow-hidden rounded-2xl w-full flex h-[300px] bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card"
+              className="relative h-full max-md:flex-col overflow-hidden max-md:items-center rounded-2xl w-full flex md:h-[300px] bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card"
               key={i}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#2F176E] to-[#734CDB] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10"></div>
@@ -57,7 +57,7 @@ export const CustomCard = () => {
               <Image
                 src={e.img}
                 alt=""
-                className="relative z-10 w-1/2 max-sm:hidden group-hover:scale-125 transition-all duration-500	 object-cover pr-2"
+                className="relative z-10 w-[300px] md:w-1/2  group-hover:scale-125 transition-all duration-500	 object-cover pr-2"
                 sizes="100vw"
                 width={0}
                 height={0}

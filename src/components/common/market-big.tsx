@@ -45,7 +45,7 @@ export const MarketBig = () => {
           <TableHeader>
             <TableRow>
               {header.map((e, i) => (
-                <TableHead key={i}>{e}</TableHead>
+                <TableHead className="text-nowrap" key={i}>{e}</TableHead>
               ))}
             </TableRow>
           </TableHeader>

@@ -7,6 +7,7 @@ import {
   Hero,
   Market,
 } from "@/components";
+import { GlobeDemo } from "@/components/common/demo";
 import dynamic from "next/dynamic";
 
 const InfinityMoving = dynamic(
@@ -22,6 +23,8 @@ const InfinityMoving = dynamic(
 export default function Home() {
   return (
     <div className="w-full flex flex-col gap-14">
+
+
       <Hero />
       <Announcement />
       <Market />
