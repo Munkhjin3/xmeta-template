@@ -18,12 +18,12 @@ export const NavbarItem = ({ text, isOpen, child }: NavbarItemPropsType) => {
   const data = [
     {
       title: "Спот арилжаа",
-      icon: <CoinSwapIcon color={theme == 'light' ?'' :"white"} />,
+      icon: <CoinSwapIcon color={theme == 'light' ? '#475467' :"white"} />,
       desc: "Спот арилжаа",
     },
     {
       title: "Фьючерс арилжаа",
-      icon: <CoinSwapIcon color={theme == 'light' ?'' :"white"} />,
+      icon: <CoinSwapIcon color={theme == 'light' ?'#475467' :"white"} />,
       desc: "Фьючерс арилжаа",
     },
   ];
