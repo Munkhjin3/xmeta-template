@@ -54,7 +54,7 @@ export const CurrencyConverter = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 relative">
+    <div className="flex flex-col gap-2 relative">
       <Card>
         <div className="p-4 border-b">
           <Typography className="text-lg font-medium dark:!text-white !text-black">
@@ -117,7 +117,7 @@ export const CurrencyConverter = () => {
           </div>
         </div>
       </Card>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
+      <div className="absolute top-[45%] left-1/2  -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
         <div className="rounded-full bg-gradient-to-r from-[#462989] to-[#734CDB] p-4">
           <RepeatIcon width={37} height={37} />
         </div>
