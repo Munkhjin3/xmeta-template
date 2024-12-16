@@ -1,6 +1,8 @@
 "use client";
 import "./globals.css";
 import { Footer, ThemeProvider } from "@/components";
+import fonts from "@/constant/fonts";
+import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
 const Navbar = dynamic(
@@ -20,7 +22,7 @@ export default function RootLayout({
       <head>
         <title>X-META</title>
       </head>
-      <body>
+      <body className={(cn(fonts.className))}>
         <ThemeProvider
           attribute="class"
           defaultTheme="systen"
