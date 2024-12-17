@@ -23,7 +23,7 @@ export const CustomCard = () => {
         {data.map((e, i) => (
           <div className="w-full group" key={i}>
             <Card
-              className="relative h-full max-md:flex-col overflow-hidden max-md:items-center rounded-2xl w-full flex  bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card"
+              className="relative  max-md:flex-col overflow-hidden max-md:items-center md:h-[350px] rounded-2xl w-full flex  bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#2F176E] to-[#734CDB] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10"></div>
               <div className="relative z-20 flex flex-col justify-between gap-6 pl-8 pt-8 pb-6">
@@ -61,7 +61,7 @@ export const CustomCard = () => {
               <Image
                 src={e.img}
                 alt=""
-                className="relative z-10 w-[500px] md:w-1/2 h-full group-hover:scale-110 transition-all duration-500 object-cover"
+                className="relative z-10 w-[300px] md:w-1/2 h-full group-hover:scale-110 transition-all duration-500 object-cover"
                 sizes="100vw"
                 width={0}
                 height={0}
