@@ -6,6 +6,7 @@ const typographyStyles = cva('', {
   variants: {
     variant: {
       title: 'lg:text-3xl xl:text-5xl 2xl:text-7xl text-2xl text-black dark:text-white font-semibold',
+      title1: 'lg:text-3xl xl:text-5xl 2xl:text-6xl text-2xl text-black dark:text-white font-semibold',
       heading2: 'lg:text-2xl xl:text-3xl text-xl text-black dark:text-white font-semibold',
       heading3: 'lg:text-xl xl:text-2xl text-lg text-black dark:text-white font-semibold',
       desc: 'text-xs sm:text-sm md:text-base 2xl:text-lg text-gray-500'

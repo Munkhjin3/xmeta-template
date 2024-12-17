@@ -15,7 +15,7 @@ const Herocontent = dynamic(
 );
 export const Hero = () => {
   return (
-    <div className="w-full mt-20 relative  pt-14">
+    <div className="w-full mt-20 relative bg-gradient-to-r from-[#2F176E] to-[#734CDB] dark:dark-card pt-14">
       <div className=" w-full flex flex-col justify-between ">
 
         <Container className="bg-transparent">
@@ -35,10 +35,11 @@ export const Hero = () => {
             width={0}
             height={0}
           /> */}
-          <Spline
+          {/* <Spline
           className="w-full absolute -bottom-[200px]"
             scene="https://prod.spline.design/CZUxncE98IfRSBKA/scene.splinecode"
-          />
+          /> */}
+
         </div>
 
         <div className="text-transparent border-t h-10 mt-20  dark:bg-[#0A0A0A] bg-white  rounded-t-2xl"></div>

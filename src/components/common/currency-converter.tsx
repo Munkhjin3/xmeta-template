@@ -14,10 +14,10 @@ import Image from "next/image";
 import { RepeatIcon } from "@/icons";
 
 const CURRENCIES = [
-  { code: "MNT", label: "Mongolian Tugrik", img: "/region/mn.png" },
-  { code: "USD", label: "US Dollar", img: "/region/us.png" },
-  { code: "USDT", label: "Tether", img: "/region/t.png" },
-  { code: "BTC", label: "Bitcoin", img: "/bitcoin.png" },
+  { code: "MNT", label: "Mongolian Tugrik", img: "/region/mn.png", symbol: "₮" },
+  { code: "USD", label: "US Dollar", img: "/region/us.png", symbol: "$" },
+  { code: "USDT", label: "Tether", img: "/region/t.png", symbol: "₮" },
+  { code: "BTC", label: "Bitcoin", img: "/bitcoin.png", symbol: "₿" },
 ];
 
 export const CurrencyConverter = () => {
@@ -25,12 +25,15 @@ export const CurrencyConverter = () => {
   const [sourceCurrency, setSourceCurrency] = useState("MNT");
   const [targetCurrency, setTargetCurrency] = useState("USDT");
 
-  const [conversionRate, setConversionRate] = useState(0.033);
-
+  const [conversionRate, setConversionRate] = useState(0.033); 
   const [convertedAmount, setConvertedAmount] = useState("");
 
-  const selectedSourceCurrency = CURRENCIES.find((c) => c.code === sourceCurrency);
-  const selectedTargetCurrency = CURRENCIES.find((c) => c.code === targetCurrency);
+  const selectedSourceCurrency = CURRENCIES.find(
+    (c) => c.code === sourceCurrency
+  );
+  const selectedTargetCurrency = CURRENCIES.find(
+    (c) => c.code === targetCurrency
+  );
 
   useEffect(() => {
     if (!sourceAmount || isNaN(Number(sourceAmount))) {
@@ -45,17 +48,10 @@ export const CurrencyConverter = () => {
     setSourceAmount(e.target.value);
   };
 
-  const handleSourceCurrencyChange = (value: string) => {
-    setSourceCurrency(value);
-  };
-
-  const handleTargetCurrencyChange = (value: string) => {
-    setTargetCurrency(value);
-  };
-
   return (
-    <div className="flex flex-col gap-2 relative">
-      <Card>
+    <div className="flex flex-col gap-4 relative">
+
+      <Card className="rounded-3xl">
         <div className="p-4 border-b">
           <Typography className="text-lg font-medium dark:!text-white !text-black">
             Зарцуулах дүн
@@ -63,8 +59,12 @@ export const CurrencyConverter = () => {
         </div>
         <div className="space-y-4">
           <div className="flex justify-between py-4 pl-4">
+
             <div className="flex w-full items-start flex-col gap-5">
-              <Select value={sourceCurrency} onValueChange={handleSourceCurrencyChange}>
+              <Select
+                value={sourceCurrency}
+                onValueChange={setSourceCurrency}
+              >
                 <SelectTrigger className="w-fit border-none p-0">
                   <SelectValue placeholder="Select currency" />
                 </SelectTrigger>
@@ -78,12 +78,12 @@ export const CurrencyConverter = () => {
                           <Image
                             src={currency.img}
                             className="h-full w-full rounded-full"
-                            alt={currency.img}
+                            alt={currency.code}
                             width={100}
                             height={100}
                           />
                         </div>
-                        <Typography className="dark:!text-white !text-black">
+                        <Typography className="font-bold dark:!text-white !text-black">
                           {currency.code}
                         </Typography>
                       </div>
@@ -97,32 +97,38 @@ export const CurrencyConverter = () => {
                 </Typography>
               </div>
             </div>
-            <div>
+
+            <div className="relative flex items-center">
               <Input
-                placeholder="0"
+                placeholder={`0${selectedSourceCurrency?.symbol || ""}`}
                 type="number"
                 value={sourceAmount}
                 onChange={handleSourceAmountChange}
-                className="!text-2xl p-0 text-black text-end dark:text-white w-fit border-none bg-transparent focus:outline-none !placeholder-black dark:!placeholder-white"
+                className="!text-2xl pr-10 p-0 text-black text-end dark:text-white w-fit border-none bg-transparent focus:outline-none !placeholder-black dark:!placeholder-white"
               />
             </div>
           </div>
+
           <div className="border-t px-4 py-6 flex justify-between">
             <Typography className="dark:!text-white !text-black">
               Estimated Price:
             </Typography>
             <Typography className="dark:!text-white !text-black">
-              1 USDT = 3522.05
+              1 {selectedTargetCurrency?.code} = 3522.05
             </Typography>
           </div>
         </div>
       </Card>
+
+
       <div className="absolute top-[45%] left-1/2  -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
         <div className="rounded-full bg-gradient-to-r from-[#462989] to-[#734CDB] p-4">
           <RepeatIcon width={37} height={37} />
         </div>
       </div>
-      <Card>
+
+
+      <Card className="rounded-3xl">
         <div className="p-4 border-b">
           <Typography className="text-lg font-medium dark:!text-white !text-black">
             Хүлээн авах дүн
@@ -130,8 +136,12 @@ export const CurrencyConverter = () => {
         </div>
         <div className="space-y-4">
           <div className="flex items-center justify-between p-4">
+
             <div className="flex flex-col gap-4">
-              <Select value={targetCurrency} onValueChange={handleTargetCurrencyChange}>
+              <Select
+                value={targetCurrency}
+                onValueChange={setTargetCurrency}
+              >
                 <SelectTrigger className="w-fit border-none p-0 ">
                   <SelectValue placeholder="Select currency" />
                 </SelectTrigger>
@@ -145,13 +155,13 @@ export const CurrencyConverter = () => {
                           <Image
                             src={currency.img}
                             className="h-full w-full rounded-full"
-                            alt={currency.img}
+                            alt={currency.code}
                             width={100}
                             height={100}
                           />
                         </div>
-                        <Typography className="dark:!text-white !text-black">
-                          {currency.label}
+                        <Typography className="font-bold dark:!text-white !text-black">
+                          {currency.code}
                         </Typography>
                       </div>
                     </SelectItem>
@@ -164,26 +174,26 @@ export const CurrencyConverter = () => {
                 </Typography>
               </div>
             </div>
-            <div>
-              <Typography className="!text-2xl !text-black dark:!text-white">
-                {convertedAmount 
-                  ? `${convertedAmount}`
-                  : `0`}
-              </Typography>
-            </div>
+
+            <Typography className="!text-2xl !text-black dark:!text-white">
+              {convertedAmount
+                ? `${convertedAmount} ${selectedTargetCurrency?.symbol}`
+                : `0 ${selectedTargetCurrency?.symbol}`}
+            </Typography>
           </div>
-          <div className="border-t px-4 py-6 flex justify-between">
+        </div>
+        <div className="border-t px-4 py-6 flex justify-between">
             <Typography className="dark:!text-white !text-black">
               Estimated Price:
             </Typography>
             <Typography className="dark:!text-white !text-black">
-              1 USDT = 3522.05
+              1 {selectedTargetCurrency?.code} = 3522.05
             </Typography>
           </div>
-        </div>
       </Card>
+
       <Button className="py-7" variant={"outline"}>
-        Buy USDT
+        Buy {targetCurrency}
       </Button>
     </div>
   );

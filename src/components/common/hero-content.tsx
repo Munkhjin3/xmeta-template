@@ -12,26 +12,26 @@ export const Herocontent = () => {
     <div className="flex gap-5 flex-col">
       <Typography
         variant={"title"}
-        className=" font-semibold space-y-4  text-primary dark:text-white "
+        className=" font-semibold space-y-4  text-primary text-white "
       >
         Mongolia's #1
          cryptocurrency exchange
       </Typography>
-      <Typography>
+      <Typography className='text-white'>
         Where every trade builds a better tomorrow
       </Typography>
     </div>
     <div className="flex flex-col gap-4">
       <div className="flex gap-2 items-center">
-        <GiftIcon />
+        <GiftIcon  />
         <Typography className="text-white">
           Earn <span className="font-bold">Welcome Bonus</span> in 3
           simple steps
         </Typography>
       </div>
       <Input className="py-7" placeholder="Email / Phone" />
-      <div className="flex gap-2">
-        <Button className="w-full py-7">Sign up for bonus</Button>
+      <div  className="flex gap-2">
+        <Button variant={'outline'} className="w-full py-7">Sign up for bonus</Button>
         <Button variant={"outline"} className="w-fit py-7">
           {" "}
           <Image src={img} width={32} height={32} alt="" />

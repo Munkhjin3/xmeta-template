@@ -35,12 +35,12 @@ export const MarkerSmall = () => {
               <TableRow key={i}>
                 <TableCell className="flex gap-2 items-center">
                   <Image src={e.icon} width={24} height={24} alt={e.title} />
-                  <Typography className="font-semibold dark:!text-white !text-black">
+                  <Typography className="font-bold dark:!text-white !text-black">
                     {e.title}
                   </Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography className="dark:!text-white !text-black">{e.price}</Typography>
+                  <Typography className="font-bold dark:!text-white !text-black">{e.price}</Typography>
                 </TableCell>
                 <TableCell>
                   <Typography
@@ -79,12 +79,12 @@ export const MarkerSmall = () => {
               <TableRow key={i}>
                 <TableCell className="flex gap-2 items-center">
                   <Image src={e.icon} width={24} height={24} alt={e.title} />
-                  <Typography className="font-semibold dark:!text-white !text-black">
+                  <Typography className="font-bold dark:!text-white !text-black">
                     {e.title}
                   </Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography className="dark:!text-white !text-black">{e.price}</Typography>
+                  <Typography className="font-bold dark:!text-white !text-black">{e.price}</Typography>
                 </TableCell>
                 <TableCell>
                   <Typography

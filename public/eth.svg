@@ -1,10 +1,1 @@
-<svg width="15" height="25" viewBox="0 0 15 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group">
-<path id="Vector" d="M7.42779 0.689323L7.26562 1.24093V17.2447L7.42779 17.4066L14.8562 13.0158L7.42779 0.689323Z" fill="#343434"/>
-<path id="Vector_2" d="M7.42838 0.689339L0 13.0158L7.42838 17.4069V0.689339Z" fill="#8C8C8C"/>
-<path id="Vector_3" d="M7.4284 18.8136L7.33691 18.9252V24.6269L7.4284 24.8931L14.8611 14.425L7.4284 18.8136Z" fill="#3C3C3B"/>
-<path id="Vector_4" d="M7.42838 24.8931V18.8133L0 14.425L7.42838 24.8931Z" fill="#8C8C8C"/>
-<path id="Vector_5" d="M7.42871 17.4068L14.8568 13.0158L7.42871 9.63937V17.4068Z" fill="#141414"/>
-<path id="Vector_6" d="M0 13.0159L7.42814 17.4069V9.63919" fill="#393939"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><rect width="48" height="48" rx="24" fill="#000"/><path fill-rule="evenodd" clip-rule="evenodd" d="M17.024 24.137l7.155-12.131 7.154 12.13-7.154 3.515-7.155-3.514zm7.155 11.857l-7.155-10.837 7.155 3.946 7.154-3.946-7.154 10.837z" fill="#fff"/></svg>
