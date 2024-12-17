@@ -49,7 +49,7 @@ export const CustomCard = () => {
                 </div>
                 <Link
                   href={""}
-                  className="border bg-transparent hover:bg-white/60 w-fit py-3 px-4 relative inline-flex items-center justify-start overflow-hidden rounded-lg group-hover:bg-white transition-all duration-500 ease-in-out group-hover:pl-16"
+                  className="border bg-transparent hover:bg-white/60 w-fit p-2 relative inline-flex items-center justify-start overflow-hidden rounded-lg group-hover:bg-white transition-all duration-500 ease-in-out group-hover:pl-16"
                 >
                   <div className="absolute flex gap-2 px-2 opacity-0 group-hover:opacity-100 left-0 -translate-x-12 duration-200 text-white group-hover:text-black ease-out group-hover:translate-x-0">
                     Дэлгэрэнгүй
