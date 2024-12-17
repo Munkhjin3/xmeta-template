@@ -8,7 +8,7 @@ export const MarkerSmall = () => {
   const topLosers = data.filter((e) => e.change < 0);
 
   return (
-    <div className="border flex flex-col justify-between rounded-md">
+    <div className="border flex flex-col  rounded-md">
 
       <div>
         <div className="border-b flex justify-between border-green-400 p-4">
@@ -24,7 +24,7 @@ export const MarkerSmall = () => {
         </div>
         <Table>
           <TableHeader>
-            <TableRow>
+            <TableRow className="!border-0">
               {header.map((e, i) => (
                 <TableHead key={i}>{e}</TableHead>
               ))}
@@ -32,8 +32,8 @@ export const MarkerSmall = () => {
           </TableHeader>
           <TableBody>
             {topGainers.map((e, i) => (
-              <TableRow key={i}>
-                <TableCell className="flex gap-2 items-center">
+              <TableRow className="border-0" key={i}>
+                <TableCell className="flex gap-2  items-center">
                   <Image src={e.icon} width={24} height={24} alt={e.title} />
                   <Typography className="font-bold dark:!text-white !text-black">
                     {e.title}
@@ -67,8 +67,8 @@ export const MarkerSmall = () => {
           </Button>
         </div>
         <Table>
-          <TableHeader>
-            <TableRow>
+          <TableHeader className="!border-0">
+            <TableRow className="!border-0">
               {header.map((e, i) => (
                 <TableHead key={i}>{e}</TableHead>
               ))}
@@ -76,7 +76,7 @@ export const MarkerSmall = () => {
           </TableHeader>
           <TableBody>
             {topLosers.map((e, i) => (
-              <TableRow key={i}>
+              <TableRow className="border-0" key={i}>
                 <TableCell className="flex gap-2 items-center">
                   <Image src={e.icon} width={24} height={24} alt={e.title} />
                   <Typography className="font-bold dark:!text-white !text-black">

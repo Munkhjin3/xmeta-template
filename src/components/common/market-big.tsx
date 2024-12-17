@@ -42,7 +42,7 @@ export const MarketBig = () => {
       </div>
       <Table>
         <TableHeader>
-          <TableRow>
+          <TableRow className="!border-0">
             {header.map((e, i) => (
               <TableHead className="text-nowrap" key={i}>
                 {e}
@@ -52,7 +52,7 @@ export const MarketBig = () => {
         </TableHeader>
         <TableBody>
           {data.map((e, i) => (
-            <TableRow key={i}>
+            <TableRow className="border-0" key={i}>
               <TableCell className="flex gap-2 items-center">
                 {" "}
                 <Image src={e.icon} width={24} height={24} alt="" />
