@@ -35,11 +35,11 @@ export const CustomCard = () => {
                     >
                       {e.title}
                     </Typography>
-                    <div className="border rounded-lg p-3 group-hover:bg-white bg-white/10 transition-colors">
+                    <div className="border rounded-lg p-2 group-hover:bg-white bg-white/10 transition-colors">
                       {cloneElement(e.icon, {
                         className:
                           "text-white group-hover:text-black transition-colors",
-                        size: 28, // Increase icon size
+                        size: 20
                       })}
                     </div>
                   </div>
