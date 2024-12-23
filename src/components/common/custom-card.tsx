@@ -28,10 +28,10 @@ export const CustomCard = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-[#2F176E] to-[#734CDB] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10"></div>
               <div className="relative z-20 flex flex-col justify-between gap-6 pl-8 pt-8 pb-6">
                 <div className="flex flex-col gap-6">
-                  <div className="flex gap-6 items-center">
+                  <div className="flex gap-6 items-start">
                     <Typography
                       variant={"heading2"}
-                      className="!text-white text-2xl lg:text-3xl font-semibold"
+                      className="!text-white  text-2xl lg:text-3xl font-semibold"
                     >
                       {e.title}
                     </Typography>

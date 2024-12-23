@@ -15,7 +15,7 @@ const Herocontent = dynamic(
 );
 export const Hero = () => {
   return (
-    <div className="w-full mt-20 relative bg-gradient-to-r from-[#2F176E] to-[#734CDB] dark:dark-card pt-14">
+    <div className="w-full mt-20 relative bg-gradient-to-r from-[#2F176E] to-[#734CDB] pt-14">
       <div className=" w-full flex flex-col justify-between ">
 
         <Container className="bg-transparent">

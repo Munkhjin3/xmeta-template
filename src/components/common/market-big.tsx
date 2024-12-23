@@ -38,7 +38,9 @@ export const MarketBig = () => {
             </Button>
           ))}
         </div>
-        <Button variant={"ghost"}>More</Button>
+        <Button variant={"ghost"} className="text-gray-400">
+            More
+          </Button>
       </div>
       <Table>
         <TableHeader>
