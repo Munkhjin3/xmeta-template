@@ -7,8 +7,8 @@ import { Button, Typography } from "../ui";
 export const BigCard = () => {
   return (
     <Container>
-      <Card className="bg-gradient-to-r w-full flex max-sm:justify-center pt-10 h-[600px] justify-between items-center dark:dark-card">
-        <div className="md:pl-8 flex flex-col gap-6 py-10">
+      <Card className="bg-gradient-to-r w-full flex max-sm:justify-center pt-10 h-[600px] justify-between gap-10  dark:dark-card">
+        <div className="md:pl-8 flex flex-col justify-center gap-6 py-10">
           <Typography className="text-white" variant={"title"}>
             Trade{" "}
             <span className="font-light">
@@ -42,7 +42,7 @@ export const BigCard = () => {
         <Image
           src={"/card/frame.png"}
           alt=""
-          className="w-1/2 max-sm:hidden object-cover "
+          className="w-full max-sm:hidden object-cover "
           sizes="100vw"
           width={0}
           height={0}

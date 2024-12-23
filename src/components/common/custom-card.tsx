@@ -19,16 +19,14 @@ export const CustomCard = () => {
         Биднийг сонгох шалтгаан
       </Typography>
 
-      <div className="grid lg:grid-cols-2 gap-6 mt-8">
+      <div className="grid xl:grid-cols-2  gap-6 mt-8">
         {data.map((e, i) => (
           <div className="w-full group" key={i}>
-            <Card
-              className="relative  max-md:flex-col overflow-hidden max-md:items-center md:h-[350px] rounded-2xl w-full flex  bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card"
-            >
+            <Card className="relative  max-md:flex-col overflow-hidden max-md:items-center h-full rounded-2xl w-full flex  bg-gradient-to-r from-[#734CDB] to-[#2F176E] dark:dark-little-card">
               <div className="absolute inset-0 bg-gradient-to-r from-[#2F176E] to-[#734CDB] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10"></div>
               <div className="relative z-20 flex flex-col justify-between gap-6 pl-8 pt-8 pb-6">
                 <div className="flex flex-col gap-6">
-                  <div className="flex gap-6 items-start">
+                  <div className="flex gap-3 items-start">
                     <Typography
                       variant={"heading2"}
                       className="!text-white  text-2xl lg:text-3xl font-semibold"
@@ -39,11 +37,11 @@ export const CustomCard = () => {
                       {cloneElement(e.icon, {
                         className:
                           "text-white group-hover:text-black transition-colors",
-                        size: 20
+                        size: 20,
                       })}
                     </div>
                   </div>
-                  <Typography className="!text-white text-lg lg:text-xl font-light">
+                  <Typography className="!text-white text-lg max-w-[400px] lg:text-xl font-light">
                     {e.desc}
                   </Typography>
                 </div>
@@ -61,7 +59,7 @@ export const CustomCard = () => {
               <Image
                 src={e.img}
                 alt=""
-                className="relative z-10 w-[300px] md:w-1/2 h-full group-hover:scale-110 transition-all duration-500 object-cover"
+                className="relative z-10 w-[300px]  pt-5 md:w-1/2 h-full group-hover:scale-110 transition-all duration-500 object-cover"
                 sizes="100vw"
                 width={0}
                 height={0}
